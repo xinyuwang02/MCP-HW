@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">Please choose your identity!</view>
+  <view class="button-container">
+    <button class="button-item" type="primary" bindtap="navigateToChat_Alice" >
+      <image class="avatar" src="/images/0.jpg"></image>
+      <view class="button-text">Alice</view>
+    </button>
+    <button class="button-item" type="primary" bindtap="navigateToChat_Bob" >
+      <image class="avatar" src="/images/1.jpg"></image>
+      <view class="button-text">Bob</view>
+    </button>
+  </view>
+</view>
+

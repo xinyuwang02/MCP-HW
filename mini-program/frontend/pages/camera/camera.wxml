@@ -1,0 +1,9 @@
+<!--pages/camera/camera.wxml-->
+<view class="camera-container">
+  <camera id="camera" mode="normal" device-position="back" flash="auto" style="width: 100%; height: 100%;"></camera>
+  <view class="button-container">
+    <button bindtap="takePhoto" class="capture-button">拍摄照片</button>
+    <button bindtap="sendPhoto" class="send-button">发送照片</button>
+  </view>
+  <image src="{{photoPath}}" class="captured-photo"></image>
+</view>

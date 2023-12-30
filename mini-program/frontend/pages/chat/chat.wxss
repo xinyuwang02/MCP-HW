@@ -1,0 +1,131 @@
+.outer-message-container {
+  height: 100vh;
+}
+
+.message-scroll {
+  height: 100%;
+}
+
+.one-message {
+  margin-bottom: 10px;
+}
+
+/* 对方的消息样式 */
+.msg-wrapper-left {
+  display: flex;
+  align-items: flex-start;
+}
+
+.avatar-left {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.left-text-wrapper {
+  background-color: #e0e0e0;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.left-image-wrapper {
+  background-color: #e0e0e0;
+  padding: 8px;
+  border-radius: 8px;
+  width: 400rpx;
+  height: 300rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px; /* 调整图片消息与上一条消息的间距 */
+}
+
+.left-image-wrapper image {
+  width: 100%; 
+  height: 100%;
+  border-radius: 8px; 
+  object-fit: contain; 
+}
+
+.msg-wrapper-right {
+  display: flex;
+  flex-direction: row-reverse; /* 反转方向，使头像在最右边 */
+  align-items: flex-end;
+}
+
+.right-text-wrapper {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* 调整自己的消息头像位置 */
+.avatar-right {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px; /* 头像和消息框之间的间距 */
+}
+
+/* 自己的消息框 */
+.right-text-wrapper {
+  margin-left: 10px; /* 调整消息框离头像的距离，使头像位于最右边 */
+}
+
+/* 自己的图片消息样式 */
+.right-image-wrapper {
+  background-color: #4caf50;
+  padding: 8px;
+  border-radius: 8px;
+  width: 400rpx;
+  height: 300rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 10px; 
+}
+
+.right-image-wrapper image {
+  width: 100%;
+  height: 100%; 
+  border-radius: 8px;
+  object-fit: contain; 
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.input-text {
+  /* flex: 1; */
+  width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  width: 24px; /* 设置相机图标的宽度，可根据实际情况调整 */
+  height: 24px; /* 设置相机图标的高度，可根据实际情况调整 */
+  margin-left: 8px; /* 设置相机图标与发送按钮之间的间距，可根据实际情况调整 */
+}
+
+.send-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+}

@@ -1,0 +1,18 @@
+# Train command: python train.py --data data/cat.yaml
+# Dataset should be placed next to yolov5 folder:
+# parent
+# ├── yolov5
+#     └── data
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: data  # dataset root dir
+train: train.txt  # train images (relative to 'path')
+val: val.txt  # val images (relative to 'path')
+test: test.txt  # test images (optional)
+
+# number of classes
+nc: 2
+
+# class names
+names: ['cat', 'dog']

@@ -1,0 +1,50 @@
+<!--pages/chat/chat.wxml-->
+<view>
+  Hello {{user_id == 0 ? 'Alice' :'Bob' }}, welcome to chat with {{user_id == 0 ?  'Bob' :'Alice'}}!
+</view>
+<view class="outer-message-container">
+  <scroll-view scroll-y="true" class="message-scroll">
+    <!--是每条消息的构成-->
+    <view wx:for="{{message_list}}" wx:key="{{index}}" class="one-message">
+      <!--字符串时间戳-->
+      <view  style="font-size: 12px; color: #999; text-align: center;">{{item.timestamp}}</view>
+      <!--对方的信息-->
+      <view wx:if="{{item.sender !== user_id}}"  class="msg-wrapper-left" >
+        <!-- 头像 -->
+        <image class="avatar-left" src="/images/{{item.sender}}.jpg"></image>
+        <!--文字-->
+        <view class="left-text-wrapper" wx:if="{{item.type===0}}">
+          {{item.text}}
+        </view>
+        <!--图片-->
+        <view class="left-image-wrapper" wx:if="{{item.type===1}}"mode="aspectFit">
+          <image src="{{item.text}}"></image>
+        </view>
+      </view>
+      <!--自己的信息-->
+      <view wx:if="{{item.sender === user_id}}"  class="msg-wrapper-right" >
+        <!-- 头像 -->
+        <image class="avatar-right" src="/images/{{item.sender}}.jpg"></image>
+        <!--文字-->
+        <view class="right-text-wrapper" wx:if="{{item.type===0}}">
+          {{item.text}}
+        </view>
+        <!--图片-->
+        <view class="right-image-wrapper" wx:if="{{item.type===1}}"mode="aspectFit">
+          <image src="{{item.text}}"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<view class="input-container">
+  <input type="text" placeholder="输入消息" bindinput="onInputTextChange" value="{{inputText}}"class="input-text" />
+  <view class="button-container">
+    <image src="/images/camera-icon.png" class="icon-button" bindtap="navigateToCamera"></image>
+    <image src="/images/gallery-icon.png" class="icon-button" bindtap="visit_gallery_and_send"></image>
+    <image src="/images/send-icon.png" class="icon-button" bindtap="sendMessage"></image>
+  </view>
+</view>
+
