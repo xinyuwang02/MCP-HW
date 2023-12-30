@@ -1,7 +1,6 @@
 #MCP2023 homework code
 
 > mini-program 和 yolo 两部分
-  项目代码中可能涉及绝对路径，运行需要正确修改
 
 ## /mini-program
 
